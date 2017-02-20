@@ -1,0 +1,9 @@
+const sub = new Subject();
+
+sub.emitChange();
+
+const observer = sub.subscribe(doSomething)
+
+sub.emitChange();
+
+observer.unsubscribe();

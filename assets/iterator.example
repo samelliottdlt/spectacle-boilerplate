@@ -1,0 +1,24 @@
+function makeIterator(array) {
+  let nextIndex = 0;
+
+  return {
+   next: function() {
+     return nextIndex < array.length ?
+       {
+         value: array[nextIndex++],
+         done: false
+       } :
+       {
+         done: true
+       };
+     }
+  }
+}
+
+const it = makeIterator(['this', 'is', 'overcomplicated']);
+
+for(let curr = it.next();
+    !curr.done;
+    curr = it.next()) {
+  console.log(curr.value);
+}
