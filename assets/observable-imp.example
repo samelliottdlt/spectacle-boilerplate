@@ -1,0 +1,18 @@
+const myObservable = (observer) => {
+    const datasource = new DataSource();
+    datasource.ondata = (e) =>
+      observer.next(e);
+    datasource.onerror = (err) =>
+      observer.error(err);
+    datasource.oncomplete = () =>
+      observer.complete();
+    return () => {
+        datasource.destroy();
+    };
+});
+
+const teardown = myObservable({
+  next(x) { console.log(x) },
+  error(err) { console.error(err); },
+  complete() { console.info('done'); }
+})

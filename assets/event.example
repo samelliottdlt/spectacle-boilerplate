@@ -1,0 +1,3 @@
+$('#button1').on('click', function() {
+  /* handle button click*/
+})

@@ -1,0 +1,11 @@
+const source = map(myObservable,
+                   x => x + '!');
+
+const teardown = source({
+  next(x) { console.log(x) }
+})
+
+// "0!"
+// "1!"
+// "2!"
+// "3!"

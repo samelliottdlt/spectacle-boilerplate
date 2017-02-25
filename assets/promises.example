@@ -1,0 +1,9 @@
+var myFirstPromise= new Promise((resolve) => {
+    setTimeout(() => {
+        resolve("Success!");
+    }, 250);
+});
+
+myFirstPromise.then(function(successMessage){
+    console.log("Yay! " + successMessage);
+});

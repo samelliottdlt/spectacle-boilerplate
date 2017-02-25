@@ -1,0 +1,5 @@
+getHeroes() : Observable<Hero[]> {
+  return this.http.get(this.heroesUrl)
+                  .map(this.extractData)
+                  .catch(this.handleError);
+}
