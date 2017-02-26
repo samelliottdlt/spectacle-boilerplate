@@ -53,9 +53,9 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={[]} transitionDuration={500} theme={theme} progress="bar">
-        <Slide bgColor="primary">
+        <Slide bgColor="primary" notes="Introduce yourself. Introductory topic. Work at Infragistics.">
           <Heading size={4} textColor="secondary">
-            Thinking Reactively
+            Reactive Programming, RX and Friends
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={1}>
             Sam Elliott De La Torre Babá
@@ -64,10 +64,10 @@ export default class Presentation extends React.Component {
             @SamElliott7C7
           </Text>
         </Slide>
-        <Slide bgColor="primary">
+        <Slide bgColor="primary" notes="A lot of adoption in the front end community. What makes it such a big deal.">
           <Heading size={6} textColor="secondary" caps>What is reactive programming and why is it so important?</Heading>
         </Slide>
-        <Slide bgColor="primary">
+        <Slide bgColor="primary" notes="To oversimplify">
           <Heading size={6} textColor="secondary">
             Reactive programming is event driven programming.
           </Heading>
@@ -88,7 +88,7 @@ export default class Presentation extends React.Component {
             It also has a lot to do with how we model our data. What if we could model our data as streams?
           </Heading>
         </Slide>
-        <Slide bgColor="primary">
+        <Slide bgColor="primary" notes="Variables encapsulate some state at the moment of assignment. A does not reflect changes on changes to a and b. Have to imperatively reassign.">
           <Heading size={6} textColor="secondary">
             What happens when we do this?
           </Heading>
@@ -109,7 +109,7 @@ export default class Presentation extends React.Component {
             Streams make it easier to manage async.
           </Heading>
         </Slide>
-        <Slide bgColor="primary">
+        <Slide bgColor="primary" notes="Lead to drag and drop with state management.">
           <Heading size={6} textColor="secondary">
             Async challenges:
           </Heading>
@@ -122,7 +122,7 @@ export default class Presentation extends React.Component {
             <ListItem>State management</ListItem>
           </List>
         </Slide>
-        <Slide bgColor="primary">
+        <Slide bgColor="primary" notes="Mouse down then mouse movement then mouse up.">
           <Text size={6} textColor="secondary">
             Lets pretend we need to implement drag and drop.
           </Text>
@@ -138,7 +138,7 @@ export default class Presentation extends React.Component {
             That's a lot of state to keep track of.
           </Text>
         </Slide>
-        <Slide bgColor="primary">
+        <Slide bgColor="primary" notes="Users can interact with our applications at any moment in any way.">
           <Heading size={6} textColor="secondary">
             The majority of our applications are async.
           </Heading>
@@ -179,7 +179,7 @@ export default class Presentation extends React.Component {
             Reactive extensions to the rescue.
           </Heading>
         </Slide>
-        <Slide bgColor="primary">
+        <Slide bgColor="primary" notes="How long rx has been around. Multiplatform.">
           <Heading size={6} textColor="secondary">
             RX has been around for a long time.
           </Heading>
@@ -225,10 +225,13 @@ export default class Presentation extends React.Component {
               title: "Iterator Pattern"
             },
             {
-              loc: [0, 14]
+              loc: [0, 16]
             },
             {
-              loc: [15, 20]
+              loc: [16, 19]
+            },
+            {
+              loc: [19, 24]
             },
           ]}
         />
@@ -273,10 +276,10 @@ export default class Presentation extends React.Component {
               title: "Observable Implementation"
             },
             {
-              loc: [0, 9]
+              loc: [0, 12]
             },
             {
-              loc: [9, 15]
+              loc: [13, 18]
             }
           ]}
         />
@@ -291,32 +294,12 @@ export default class Presentation extends React.Component {
           code={require("raw-loader!../assets/map-operator.example")}
           ranges={[
             {
-              loc: [0, 0],
-              title: "Operator Implementation"
-            },
-            {
-              loc: [0, 8]
+              loc: [0, 4],
+              title: "Operators"
             }
           ]}
         />
-        <CodeSlide
-          transition={[]}
-          lang="js"
-          code={require("raw-loader!../assets/observable-and-operator.example")}
-          ranges={[
-            {
-              loc: [0, 0],
-              title: "Putting it all together"
-            },
-            {
-              loc: [0, 6]
-            },
-            {
-              loc: [7, 11]
-            }
-          ]}
-        />
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary" notes="What can we do with observables? Lodash is a utility library.">
           <Heading size={6} textColor="secondary">Think of RxJS as Lodash for async</Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
